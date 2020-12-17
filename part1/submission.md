@@ -1,4 +1,5 @@
 # Part 1 Submission
+All commands are ran either from part1 folder or exercise specific folder. (Can't remember which one with the case of directories)
 
 ### 1.1
 
@@ -79,6 +80,64 @@ docker run -p 4444:80 devopsdockeruh/ports_exercise
 ### 1.10
 
 Dockerfile is in the folder named 1.10
+```
+docker build -t oneten .
+docker run -d -p 5000:5000 --name ten oneten
+```
+
+### 1.11
+
+Dockerfile is in the folder named 1.11.
+Create file "lelogs.txt" on host machine first or docker will create a folder which will result in an error due to file mismatch.
+```
+docker build -t oneeleven .
+docker run -d -v $(pwd)/lelogs.txt:/backend/logs.txt -p 8000:8000 --name eleven oneeleven
+```
+
+### 1.12
+- added environment variables to dockerfiles of 11 & 12
+- changed ```docker run``` params
+```
+#backend
+docker run --network host --rm -d -v $(pwd)/lelogs.txt:/backend/logs.txt -p 8000:8000 --name eleven oneeleven
+```
+```
+#frontend
+docker run --network host --rm -d -p 5000:5000 --name ten oneten
+```
+
+### 1.13
+build and run with the following two commands
+build: ```docker build -t spring .```
+run: ```docker run -it -p 8080:8080 --name sp3 spring```
+
+### 1.14
+build and run with the following two commands\
+build: ```docker build -t rub .```\
+run: ```docker run -it -p 8080:8080 --name rub rub```
+
+### 1.15
+build, run and post example for reversing a letter order of text\
+build: ```docker build -t nod .```\
+run: ```docker run -it -p 8080:8080 --name nod nod```\
+example (scripts in folder for more): ```curl -d '{"type":"1", "msg":"abc"}' -H "Content-Type: application/json" -X POST http://localhost:8080```
+
+### 1.16 skipped
+
+### 1.17
+
+linux 16.04 as base\
+added node and react, by default my fac terminal is bash and it is already included in the linux destro\
+build: ```docker build -t development .```\
+run: ```docker run -it -p 3000:3000 --name dev development```\
+node version verification run next: ```node -v```\
+create a react app: 
+```
+npx create-react-app my-app
+cd my-app
+npm start 
+```
+
 
 ## Self cheat sheet
 1.5 for multiline cmd
