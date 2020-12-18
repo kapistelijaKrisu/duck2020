@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+
+    hello-world:
+        image: devopsdockeruh/first_volume_exercise
+        volumes: 
+            - ./2.1logs.txt:/usr/app/logs.txt
+        container_name: hello

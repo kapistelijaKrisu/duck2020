@@ -1,0 +1,17 @@
+version: '3.5'
+
+services: 
+
+    backend:
+        image: oneeleven
+        build: ../../part1/1.11
+        volumes: 
+            - ./lelogs.txt:/backend/logs.txt
+        ports: 
+            -  8000:8000
+    frontend:
+        image: oneten
+        build: ../../part1/1.10
+        ports: 
+            - 5000:5000
+
