@@ -42,3 +42,7 @@ anyway fixing that is not part of this but 2.10
 ### 2.9
 
 in the folder. Had to re-pull backend as it was broken in spring. If other exercises break then use backend from late spring.
+
+### 2.10
+
+skipped

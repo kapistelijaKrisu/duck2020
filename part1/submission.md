@@ -120,9 +120,12 @@ run: ```docker run -it -p 8080:8080 --name rub rub```
 build, run and post example for reversing a letter order of text\
 build: ```docker build -t nod .```\
 run: ```docker run -it -p 8080:8080 --name nod nod```\
-example (scripts in folder for more): ```curl -d '{"type":"1", "msg":"abc"}' -H "Content-Type: application/json" -X POST http://localhost:8080```
+some scripts are broken. code is also hardcoded to port 8080 due to deadline issues back in the day.
+working example: ./sendMessage.sh 1 kotimato \
+NOTE: it's self repairing app that brings up workers as they are killed -> might need force removal "docker container rm -f \<id\>"
 
-### 1.16 skipped
+### 1.16
+skipped
 
 ### 1.17
 
