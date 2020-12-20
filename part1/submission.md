@@ -130,7 +130,7 @@ skipped
 ### 1.17
 
 linux 16.04 as base\
-added node and react, by default my fac terminal is bash and it is already included in the linux destro\
+added node and react, added nano as text editor
 build: ```docker build -t development .```\
 run: ```docker run -it -p 3000:3000 --name dev development```\
 node version verification run next: ```node -v```\

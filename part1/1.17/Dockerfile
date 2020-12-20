@@ -2,7 +2,8 @@ FROM ubuntu:16.04
 
 ENV NODE_VERSION=14.15.2
 RUN apt-get update && \
-    apt-get install wget curl ca-certificates rsync -y
+    apt-get install wget curl ca-certificates rsync -y && \
+    apt-get install nano
 RUN wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
 ENV NVM_DIR=/root/.nvm
 RUN . "$NVM_DIR/nvm.sh" && nvm install ${NODE_VERSION}
